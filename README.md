@@ -1,33 +1,51 @@
-# 8-3-JS-Text-Part-Two
+# 8-4-JS-Functions
 
 ## Video
 
-[Video](https://youtu.be/aGYG93jwNr8) <-- Make sure to watch this video first
+[Video](https://youtu.be/5tmtBjdw62w) <-- Make sure to watch this video first
 
 ## Directions
 
-### Step #1 - Follow the mouse with the pink ball! <br>
+### Step #1 - What's your name? <br>
 
-To start our mouse tracking program, make it so that the `ellipse()` shows up at the user's mouse position, instead of always being in the same position.
+This program says hi to you at a random point on the screen. Change the name variable so it says your name instead.
 <br><br>
-Hint: Use the `mouseX` and `mouseY` variables to position your ellipse.
+Hint: Your name should be a string, so make sure you keep it inside "quotation marks".
 <br><br>
 
-### Step #2 - Display the coordinates! <br>
+### Step #2 - Function-ize it! <br>
 
-To make this tracker more useful, you're going to constantly display a label with the current x and y mouse coordinates next to the dot. To do that:
+It's time to wrap your code in a function:
 <br>
-- Add together `mouseX`, a string with a comma, and `mouseY`; Store as a variable
-> `var label = XXXX + " , " + XXXXX;`
 
-- Pass the variable into the text command and show it next to the ball.
-> `text(label, XXXX, XXXX)`
+- Start off by creating a new function, paying close attention to (parenthesis) and {curly braces} ;
+- Move all of your code inside the function;
+- Call your new function once to make sure it works.
+
+> `var drawName = function(){`
+> <br>
+> <br>  `}`
+
+Bonus: Indent the code inside the function, by selecting it and clicking TAB. It doesn't change the result, but it makes the code look nicer and easier to read ^ . ^
 <br><br>
 
-### Step #3 - Add a feature! <br>
+### Step #3 - Keep calling it! <br>
 
-Try to add one of the following extra features to this lesson: 
+Now that we have it in a function, it's easy for us to call it multiple times inside the `setup() function`. Call it at least 3 times! Names everywhere!
+<br><br>
+
+> `drawName();` <br> 
+> `drawName();`. <br> 
+> `drawName();` <br>
+
+### Step #4 - Add a new custom fuction! <br>
+
+The starter code contains a `drawStar` function that is called three times when the mouse is clicked.
 <br>
-- Change Color Based on mouseX and mouseY [Example Code](https://docs.google.com/presentation/d/18CBxJdV9EW1gLmR3ZAtA_Etil6GiPvKhSNLmE5Wq63k/edit#slide=id.g2d8681d0968_0_12)
-- Change Font [Example Code](https://docs.google.com/presentation/d/18CBxJdV9EW1gLmR3ZAtA_Etil6GiPvKhSNLmE5Wq63k/edit#slide=id.g2d87d56757f_1_138)
-<br><br>
+
+- Duplicate the `drawStar` function code
+- Title the function `drawFace` and update the code so that it draws an emoji face
+- Add two calls to this function in the `mouseClicked` function.
+
+<br>
+If done correctly, when the mouse is clicked, three star and two face emojis should appear near where the user clicked.
